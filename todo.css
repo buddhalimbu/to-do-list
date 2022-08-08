@@ -1,0 +1,217 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+/* colors set */
+
+:root {
+    --defaultColor : #ed6b5b;
+    --primaryColor: #f4aaff;
+    --whiteColor : #fff;
+    --whiteBg :#fff;
+    --blackColor: #000;
+    --btnColor : #ed6b5b;
+    --btnColorClear : #6ab6ff;     
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box
+}
+body {
+    font-family:'Raleway', sans-serif;
+    line-height:28px;
+    font-size:16px;
+    padding:12px;
+    
+}
+.box {
+    width:100%;
+    max-width:800px;
+    display:flex;
+    justify-content:center;
+    margin:0 auto;
+    flex-direction:column;
+    padding:20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-top:5px solid var(--defaultColor);
+}
+
+.box h2 {
+    font-size:24px;
+    text-align:center;
+    padding:12px 0
+}
+
+.search {
+    display :grid;
+    grid-template-columns:auto 1fr;
+    border:1px solid rgba(0,0,0,0.07);
+    background:rgba(0,0,0,0.05);
+    margin:0 0 20px 0;
+    align-items:center;
+    border-radius:6px;
+}
+.search span{
+    height:38px;
+    padding:0 13px;
+    line-height:38px
+}
+
+
+.search input {
+   height:38px;
+   width:auto;
+    padding:0 10px;
+    background:rgba(0,0,0,0.01);
+    border-radius:0px;
+    border:none;
+    font-family:'Raleway', sans-serif;
+    color:rgba(0,0,0,0.7)
+}
+
+.search input:focus {
+    outline:none;
+    border:none
+}
+.ctext {
+    text-align: center;
+    margin:20px 0;
+    font-size:20px
+}
+.item-top {
+    padding:0;
+    display:grid;
+    grid-template-columns:1fr 20%;
+    grid-gap:0 px;
+    
+}
+.item-top input{
+height:38px;
+    height:auto;
+    padding:0 10px;
+    border:none;
+    bckbackground: var(--whiteBg);
+    border-radius:0px;
+    border:1px solid rgba(0,0,0,0.07);
+    font-family:'Raleway', sans-serif;
+    color:rgba(0,0,0,0.7)
+}
+
+.item-top textarea:focus {
+    outline:none
+}
+
+.btns {
+   
+display:grid;
+grid-gap:6px
+    
+}
+.item-top button {
+    height:38px;
+    width:100%;
+    background:var(--btnColor);
+    color:var(--whiteColor);
+    vertical-align:bottom;
+    border:none;
+    outline:none;
+    border-radius:0px;
+    text-transform:uppercase;
+    font-weight:bold;
+    }
+    
+   .item-top button span {margin-right:5px}
+.item-top input:hover {
+    opacity.8
+}
+
+
+
+ul {
+    background:var(--whiteBg);
+    padding:0;
+    display :grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    grid-gap:0;
+    list-style:none;
+    position:relative;
+    border-radius:4px;
+    color:var(--blackColor);
+    margin-top : 20px;
+ }
+ 
+ul #no-notes {
+    font-size:25px;
+    text-align:center;
+   
+}
+
+ul li {
+    color:var(--blackColor);
+    background:rgba(255,255,255,0.3);
+    padding:16px 24px;
+    margin:0;
+    position: relative ;
+    border-radius:0px;
+    text-transform:capitalize;
+    white-space:no-wrap;
+    word-wrap:break;word;
+    border: 1px solid rgba(0,0,0,0.07);
+    border-collapse: collapse;
+}
+
+ul li span {
+    position: absolute;
+    right:15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index:6;
+   font-size:15px;
+   
+}
+
+.clear {
+    width:130px;
+    margin-top:20px;
+    padding:12px;
+    color:var(--whiteColor);
+    vertical-align:bottom;
+    border:none;
+    outline:none;
+    border-radius:4px;
+    text-transform:uppercase;
+    font-weight:bold;
+    background:var(--btnColorClear);
+    transition:0.4s ease;
+    display:block;
+}
+.clear.hide {
+    display:none;
+}
+.clear span {
+    margin-right:6px;
+}
+.alert {
+    background:var(--primaryColor);
+    position: absolute;
+    top:-4px;
+    left:50%;
+    transform: translateX(-50%);
+    padding: 2px 12px;
+    font-size:13px;
+    visibility:hidden;
+    opacity:0;
+    transition:0.4s ease;
+    color:var(--whiteColor);
+    width:220px;
+    margin:0 auto ;
+    z-index:99
+}
+
+.alert.active {
+    opacity:1;
+    visibility:visible;
+    border-radius:3px;
+    top:5px
+}
