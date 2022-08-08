@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>JavaScript to-do List</title>
+    
+    <link rel="stylesheet" href="todo.css"/>
+  
+</head>
+<body>
+    
+    <div class="box">
+        <h2>JavaScript To-Do List</h2><br/>
+        <div class="search">
+            <span class="fa fa-search"></span>
+            <input type="text" placeholder="Search note....." class="searchMe"/>
+            
+        </div>
+        
+      <p class="ctext">
+                JavaScript script to-do list <br/>
+                custom alert message.
+            </p>
+        
+        <div class="item-top">
+            
+            <input class="text" value="" placeholder="Write something...."/>
+            <div class="btns">
+                <button type="button" id="addItems"><span class="fa fa-plus"></span>add</button>
+            
+            </div>
+        </div>
+    
+   <ul class="ul" id="ul">
+       <span class="alert"></span>
+       <li> JavaScript is powerful.</li>
+       <li>I like coding </li>
+       <li>Personal website.</li>
+       <li>Click me to remove.</li>
+   </ul>
+   <button type="button" value="Clear" class="clear"><span class="fa fa-eraser"></span>Clear All</button>
+    </div>
+ <script src="todo.js"></script>
+</body>                            
+</html>
